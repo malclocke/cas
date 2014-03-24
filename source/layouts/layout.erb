@@ -41,50 +41,52 @@
               <%=
                 link_to(
                   'Outreach <b class="caret"></b>',
-                  '/outreach.html',
+                  '#',
                   'data-toggle' => 'dropdown',
                   'class' => 'dropdown-toggle'
                 )
               %>
               <ul class="dropdown-menu">
-                <li><%= link_to 'Open Nights', '/open-nights.html' %></li>
+                <li><%= link_to 'Open night calendar', '/open-nights/calendar.html' %></li>
+                <li><%= link_to 'Open night info', '/open-nights/info.html' %></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Member info</li>
-                <li><%= link_to 'Open Night Helpers', '/open-night-helpers.html' %></li>
+                <li><%= link_to 'Open Night Helpers', '/open-nights/helpers.html' %></li>
               </ul>
             </li>
             <li class="dropdown">
               <%=
                 link_to(
                   'Society <b class="caret"></b>',
-                  '/society.html',
+                  '#',
                   'data-toggle' => 'dropdown',
                   'class' => 'dropdown-toggle'
                 )
               %>
               <ul class="dropdown-menu">
-                <li><%= link_to 'Membership', '/membership.html' %></li>
-                <li><%= link_to 'Monthly Meetings', '/meetings.html' %></li>
-                <li><%= link_to 'CASMAG', '/casmag.html' %></li>
-                <li><%= link_to 'Library', '/library.html' %></li>
+                <li><%= link_to 'About', '/society/index.html' %></li>
+                <li><%= link_to 'Membership', '/society/membership.html' %></li>
+                <li><%= link_to 'Monthly Meetings', '/society/meetings.html' %></li>
+                <li><%= link_to 'CASMAG', '/society/casmag.html' %></li>
+                <li><%= link_to 'Library', '/society/library.html' %></li>
               </ul>
             </li>
             <li class="dropdown">
               <%=
                 link_to(
                   'Observatory <b class="caret"></b>',
-                  '/observatory.html',
+                  '#',
                   'data-toggle' => 'dropdown',
                   'class' => 'dropdown-toggle'
                 )
               %>
               <ul class="dropdown-menu">
-                <li><%= link_to 'History', '/history.html' %></li>
-                <li><%= link_to 'Telescopes', '/telescopes.html' %></li>
-                <li><%= link_to 'Location', '/meetings.html' %></li>
+                <li><%= link_to 'About', '/observatory/index.html' %></li>
+                <li><%= link_to 'Telescopes', '/observatory/telescopes.html' %></li>
+                <li><%= link_to 'Location', '/observatory/location.html' %></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Member info</li>
-                <li><%= link_to 'Maintenance Roster', '/maintenance-roster.html' %></li>
+                <li><%= link_to 'Maintenance Roster', '/observatory/maintenance-roster.html' %></li>
               </ul>
             </li>
             <li><%= link_to 'Contact', '/contact.html' %></li>
@@ -98,11 +100,6 @@
     <div class="container">
 
       <%= yield %>
-
-      <!-- FOOTER -->
-      <footer>
-        <p>&copy; 2014 Canterbury Astronomical Society.</p>
-      </footer>
 
     </div><!-- /.container -->
 
