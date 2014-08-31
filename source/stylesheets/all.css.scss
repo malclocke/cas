@@ -1,1 +1,5 @@
 @import "bootstrap";
+
+table {
+  @extend .table
+}

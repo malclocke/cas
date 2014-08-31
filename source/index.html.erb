@@ -8,18 +8,23 @@ title: CAS - Canterbury Astronomical Society
 <div class="row featurette">
   <div class="col-md-7">
     <h2 class="featurette-heading">Outreach. <span class="text-muted">Discover the universe..</span></h2>
-    <div class="well">
-      <h3>Open Night: 11 Apr 2014 <span class="label label-success">Open</span></h3>
-      <p>
-      Sky conditions are great for tonigh&apos;s open night for the Flat Earth
-      Society.
-      </p>
-    </div>
+    <% if open_night = OpenNight.upcoming(sitemap.resources).first %>
+      <div class="well">
+        <h3>Open Night: <%= open_night.date.strftime('%e %b %Y') %>
+          <%= open_night_status_label(open_night) %>
+        </h3>
+        <p>
+          <%= open_night.status_message %>
+        </p>
+      </div>
+    <% end %>
     <p class="lead">
-    Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula
-    porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque
-    nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-    <%= link_to '<span class="glyphicon glyphicon-circle-arrow-right"></span> Learn more', '/open-nights/info.html', :class => 'btn btn-default' %>
+      Outreach is an important part of the work carried out by CAS.  We hold
+      regular public open nights during the winter months.  A visit to the
+      observatory is a memorable experience for young and old alike.
+    </p>
+    <p>
+      <%= link_to '<span class="glyphicon glyphicon-circle-arrow-right"></span> Learn more', '/open-nights/info.html', :class => 'btn btn-default' %>
     </p>
   </div>
   <div class="col-md-5">
@@ -38,9 +43,12 @@ title: CAS - Canterbury Astronomical Society
       The Society. <span class="text-muted">Join Us.</span>
     </h2>
     <p class="lead">
-      Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula
-      porta felis euismod semper. Praesent commodo cursus magna, vel
-      scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      Becoming a member of CAS is a great way to meet like minded astronomers
+      and gives you access to a wide array of resources. 
+      Whether you are new to the hobby or an old hand, CAS membership has a
+      lot to offer.
+    </p>
+    <p>
       <%= link_to '<span class="glyphicon glyphicon-circle-arrow-right"></span> Learn more', '/society/index.html', :class => 'btn btn-default' %>
     </p>
   </div>
@@ -51,14 +59,16 @@ title: CAS - Canterbury Astronomical Society
 <div class="row featurette">
   <div class="col-md-7">
     <h2 class="featurette-heading">
-      The Observatory. <span class="text-muted">Dometastic.</span>
+      The Observatory. <span class="text-muted">Get out under the stars.</span>
     </h2>
     <p class="lead">
-      Donec ullamcorper nulla non metus auctor fringilla.  Vestibulum id ligula
-      porta felis euismod semper. Praesent commodo cursus magna, vel
-      scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      <%= link_to '<span class="glyphicon glyphicon-circle-arrow-right"></span> Learn more', '/observatory/index.html', :class => 'btn btn-default' %>
+      The jewel in the crown of the society, the R. F. Joyce Observatory is
+      a unique facility in New Zealand, offering members and visitors access
+      to an array of telescopes at a dark sky site just half an hour from
+      Christchurch City.
     </p>
+    <p>
+      <%= link_to '<span class="glyphicon glyphicon-circle-arrow-right"></span> Learn more', '/observatory/index.html', :class => 'btn btn-default' %>
     </p>
   </div>
   <div class="col-md-5">

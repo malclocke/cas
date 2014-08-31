@@ -4,16 +4,17 @@
       <th>Date</th>
       <th>Public Night</th>
       <th>Group Booking</th>
-      <th>Moon Phase</th>
       <th>Moon Viewable?</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>29 March</td>
-      <td>Open for individuals or small groups</td>
-      <td>Earth Hour: 8:00pm to 9:30pm</td>
-      <td></td>
-      <td>No</td>
+    <% OpenNight.future(sitemap.resources).each do |open_night| %>
+      <tr>
+        <td><%= link_to open_night.date, open_night.url %></td>
+        <td><%= open_night.is_open ? 'Open for individuals and small groups' : 'Closed' %></td>
+        <td><%= open_night.group_booking %></td>
+        <td><%= open_night.moon_viewable ? 'Yes' : 'No' %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>

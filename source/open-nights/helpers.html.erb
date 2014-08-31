@@ -21,10 +21,17 @@ society's telescopes as there are always experienced members on hand to help.
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>29th March</td>
-      <td>Earth Hour</td>
-      <td>Gary Steel</td>
-    </tr>
+    <% OpenNight.all(sitemap.resources).each do |open_night| %>
+      <tr>
+        <td><%= open_night.date %></td>
+        <td><%= open_night.group_booking %></td>
+        <td>
+          <%= open_night.helpers.join(', ') %>
+          <% if open_night.more_helpers_needed? %>
+            - more helpers needed!
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
   </tbody>
 </table>

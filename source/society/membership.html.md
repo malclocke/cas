@@ -10,14 +10,97 @@ please fill out the form below.
 2013 Membership Subscription Rates
 ----------------------------------
 
-Membership category Discounted Full
-    Adult (any person 18 years of age or over who is not eligible for any other category)  $70   $80
-    Family (two or more persons living at the same address)  $105  $120
-    Junior (under 18 years of age on 1 April of the current year)  $35   $40
-    Senior Citizen (over 65 years)   $35   $40
-    Community Services Card Holder   $35   $40
-    Student (any person studying full-time at a tertiary institution, must reapply annually)   $35   $40
-    Corporate (members have voting rights of one member but cannot take office)  $210  $240
+<table class="table">
+  <thead>
+    <tr>
+      <th>Membership category</th>
+      <th>Discounted</th>
+      <th>Full</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Adult (any person 18 years of age or over who is not eligible for any
+        other category)
+      </td>
+      <td>
+        $70
+      </td>
+      <td>
+        $80
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Family (two or more persons living at the same address)
+      </td>
+      <td>
+        $105
+      </td>
+      <td>
+        $120
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Junior (under 18 years of age on 1 April of the current year)
+      </td>
+      <td>
+        $35
+      </td>
+      <td>
+        $40
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Senior Citizen (over 65 years)
+      </td>
+      <td>
+        $35
+      </td>
+      <td>
+        $40
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Community Services Card Holder
+      </td>
+      <td>
+        $35
+      </td>
+      <td>
+        $40
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Student (any person studying full-time at a tertiary institution, must
+        reapply annually)
+      </td>
+      <td>
+        $35
+      </td>
+      <td>
+        $40
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Corporate (members have voting rights of one member but cannot take
+        office)
+      </td>
+      <td>
+        $210
+      </td>
+      <td>
+        $240
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 Discounted amount applies to:
 

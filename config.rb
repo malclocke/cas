@@ -1,3 +1,5 @@
+require './lib/open_night'
+
 ###
 # Compass
 ###
@@ -45,6 +47,25 @@
 #   end
 # end
 
+helpers do
+  def open_night_status_label(open_night)
+    case(open_night.go_ahead?)
+    when true
+      label_class="success"
+      label_message="Open"
+    when false
+      label_class="danger"
+      label_message="Closed"
+    else
+      label_class="default"
+      label_message="Stand by"
+    end
+    content_tag(:span, :class => "label label-#{label_class}") do
+      label_message
+    end
+  end
+end
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
@@ -67,4 +88,10 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host   = 'wholemeal.co.nz'
+  deploy.path   = '/home/malc/websites/cas.org.nz'
 end
