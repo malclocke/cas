@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>CAS - Canterbury Astronomical Society</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <!-- NAVBAR
+  ================================================== -->
+  <body class="index">
+
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img class="img-responsive" src="/images/cas-logo.png" /></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">Outreach <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/open-nights/calendar.html">Open night calendar</a></li>
+                <li><a href="/open-nights/info.html">Open night info</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Member info</li>
+                <li><a href="/open-nights/helpers.html">Open Night Helpers</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">Society <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/society/">About</a></li>
+                <li><a href="/society/membership.html">Membership</a></li>
+                <li><a href="/society/meetings.html">Monthly Meetings</a></li>
+                <li><a href="/society/casmag.html">CASMAG</a></li>
+                <li><a href="/society/library.html">Library</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">Observatory <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/observatory/">About</a></li>
+                <li><a href="/observatory/location.html">Location</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Member info</li>
+                <li><a href="/observatory/maintenance-roster.html">Maintenance Roster</a></li>
+              </ul>
+            </li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+
+      
+
+      <!-- START THE FEATURETTES -->
+
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">Outreach. <span class="text-muted">Discover the universe..</span></h2>
+    <div id="events">Loading ...</div>
+    <p class="lead">
+      Outreach is an important part of the work carried out by CAS.  We hold
+      regular public open nights during the winter months.  A visit to the
+      observatory is a memorable experience for young and old alike.
+    </p>
+    <p>
+      <a class="btn btn-default" href="/open-nights/info.html"><span class="glyphicon glyphicon-circle-arrow-right"></span> Learn more</a>
+    </p>
+  </div>
+  <div class="col-md-5">
+    <img class="img-responsive img-rounded" src="/images/outreach.jpg" />
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-5">
+    <img class="img-responsive img-rounded" src="/images/society.jpg" />
+  </div>
+  <div class="col-md-7">
+    <h2 class="featurette-heading">
+      The Society. <span class="text-muted">Join Us.</span>
+    </h2>
+    <p class="lead">
+      Becoming a member of CAS is a great way to meet like minded astronomers
+      and gives you access to a wide array of resources. 
+      Whether you are new to the hobby or an old hand, CAS membership has a
+      lot to offer.
+    </p>
+    <p>
+      <a class="btn btn-default" href="/society/"><span class="glyphicon glyphicon-circle-arrow-right"></span> Learn more</a>
+    </p>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">
+      The Observatory. <span class="text-muted">Get out under the stars.</span>
+    </h2>
+    <p class="lead">
+      The jewel in the crown of the society, the R. F. Joyce Observatory is
+      a unique facility in New Zealand, offering members and visitors access
+      to an array of telescopes at a dark sky site just half an hour from
+      Christchurch City.
+    </p>
+    <p>
+      <a class="btn btn-default" href="/observatory/"><span class="glyphicon glyphicon-circle-arrow-right"></span> Learn more</a>
+    </p>
+  </div>
+  <div class="col-md-5">
+    <img class="img-responsive img-rounded" src="/images/observatory.jpg" />
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<!-- /END THE FEATURETTES -->
+
+<script type="text/javascript" src="/mustache.js"></script>
+<script id="event_template" type="x-mustache-template">
+  <div class="well">
+    <h3>Open Night: {{ date }}
+      <span class="label label-{{ label_class }}">{{ label_message }}</span>
+    </h3>
+    <p>
+      {{ status_message }}
+    </p>
+  </div>
+</script>
+<script type="text/javascript">
+  function OpenNight(data) {
+    this.data = data;
+    this.date = new Date(data.date);
+  };
+
+  OpenNight.prototype.addLabelPropertiesTo = function(obj) {
+    switch(this.data.go_ahead) {
+      case true:
+        obj['label_class'] = 'success';
+        obj['label_message'] = 'Open';
+        break;
+      case false:
+        obj['label_class'] = 'danger';
+        obj['label_message'] = 'Closed';
+        break;
+      default:
+        obj['label_class'] = 'default';
+        obj['label_message'] = 'Stand by';
+        break;
+    }
+
+    return obj;
+  };
+
+  OpenNight.prototype.defaultStatusMessage = function() {
+    if (this.data.go_ahead === true) {
+      return 'The observatory is open tonight.';
+    } else if(this.data.go_ahead === false) {
+      return 'The observatory is closed tonight.';
+    } else {
+      return 'An update will be posted here by 6.30pm';
+    }
+  };
+
+  OpenNight.prototype.statusMessage = function() {
+    if (this.data.status_message) {
+      return this.data.status_message;
+    } else {
+      return this.defaultStatusMessage();
+    }
+  };
+
+  OpenNight.prototype.forTemplate = function() {
+    var obj = {
+      date: new Date(this.data.date).toDateString(),
+      status_message: this.statusMessage()
+    };
+    this.addLabelPropertiesTo(obj);
+    return obj;
+  };
+
+  OpenNight.prototype.daysInMilliseconds = function(numberOfDays) {
+    return numberOfDays * 86400000;
+  };
+
+  OpenNight.prototype.showFromDate = function() {
+    var daysInAdvance = this.data.show_days_in_advance || 6;
+    return new Date(this.date.getTime() - (this.daysInMilliseconds(daysInAdvance)))
+  };
+
+  OpenNight.prototype.isUpcoming = function(now) {
+    return this.date >= now && this.showFromDate(now) <= now;
+  };
+
+  OpenNight.upcoming = function(data) {
+    var now = new Date();
+    // TODO Add polyfills
+    return data.map(function(obj) {
+      return new OpenNight(obj);
+    }).filter(function(obj) {
+      return obj.isUpcoming(now);
+    }).sort(function(a, b) {
+      return b.date - a.date;
+    });
+  };
+
+  $((function($, Mustache, OpenNight) {
+    var template = $('#event_template').html();
+    Mustache.parse(template);
+    $('#events').html('');
+    $.getJSON('/events.json', function(data) {
+      $.each(OpenNight.upcoming(data), function(index, openNight) {
+        //openNight = new OpenNight(obj);
+        var rendered = Mustache.render(template, openNight.forTemplate());
+        $('#events').append(rendered);
+      });
+    });
+  })($, Mustache, OpenNight));
+</script>
+
+
+    </div><!-- /.container -->
+
+  </body>
+</html>
