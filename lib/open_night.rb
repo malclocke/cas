@@ -1,6 +1,23 @@
 require 'forwardable'
-
+#
+# Open night metadata is as follows:
+#
+# ---
+# date: 2014-03-29
+# group_booking: Earth Hour 8:00pm to 9:30pm
+# moon_phase: 20
+# moon_viewable: true
+# go_ahead: true
+# show_nights_in_advance: 6
+# status_message: Obs is open tonight
+# helpers:
+#   - Gary Steel
+#   - Malcolm Locke
+# ---
+#
 class OpenNight
+
+  UPCOMING_DAYS = 14
 
   def self.all(resources)
     resources.select do |resource|
@@ -28,6 +45,18 @@ class OpenNight
     @resource = resource
   end
 
+  def to_json(*a)
+    to_h.merge('date' => date).to_json(*a)
+  end
+
+  def to_h
+    data
+  end
+
+  def partial_name
+    :open_night
+  end
+
   def data
     resource.data
   end
@@ -37,7 +66,7 @@ class OpenNight
   end
 
   def date
-    @date ||= Date.parse(data.date)
+    @date ||= data.date
   end
 
   def time_start
@@ -61,7 +90,7 @@ class OpenNight
   end
 
   def upcoming?
-    future? && date - Date.today < 7
+    future? && date - Date.today < UPCOMING_DAYS
   end
 
   def go_ahead?

@@ -8,16 +8,7 @@ title: CAS - Canterbury Astronomical Society
 <div class="row featurette">
   <div class="col-md-7">
     <h2 class="featurette-heading">Outreach. <span class="text-muted">Discover the universe..</span></h2>
-    <% if open_night = OpenNight.upcoming(sitemap.resources).first %>
-      <div class="well">
-        <h3>Open Night: <%= open_night.date.strftime('%e %b %Y') %>
-          <%= open_night_status_label(open_night) %>
-        </h3>
-        <p>
-          <%= open_night.status_message %>
-        </p>
-      </div>
-    <% end %>
+    <div id="events">Loading ...</div>
     <p class="lead">
       Outreach is an important part of the work carried out by CAS.  We hold
       regular public open nights during the winter months.  A visit to the
@@ -80,3 +71,104 @@ title: CAS - Canterbury Astronomical Society
 
 <!-- /END THE FEATURETTES -->
 
+<script type="text/javascript" src="/mustache.js"></script>
+<script id="event_template" type="x-mustache-template">
+  <div class="well">
+    <h3>Open Night: {{ date }}
+      <span class="label label-{{ label_class }}">{{ label_message }}</span>
+    </h3>
+    <p>
+      {{ status_message }}
+    </p>
+  </div>
+</script>
+<script type="text/javascript">
+  function OpenNight(data) {
+    this.data = data;
+    this.date = new Date(data.date);
+  };
+
+  OpenNight.prototype.addLabelPropertiesTo = function(obj) {
+    switch(this.data.go_ahead) {
+      case true:
+        obj['label_class'] = 'success';
+        obj['label_message'] = 'Open';
+        break;
+      case false:
+        obj['label_class'] = 'danger';
+        obj['label_message'] = 'Closed';
+        break;
+      default:
+        obj['label_class'] = 'default';
+        obj['label_message'] = 'Stand by';
+        break;
+    }
+
+    return obj;
+  };
+
+  OpenNight.prototype.defaultStatusMessage = function() {
+    if (this.data.go_ahead === true) {
+      return 'The observatory is open tonight.';
+    } else if(this.data.go_ahead === false) {
+      return 'The observatory is closed tonight.';
+    } else {
+      return 'An update will be posted here by 6.30pm';
+    }
+  };
+
+  OpenNight.prototype.statusMessage = function() {
+    if (this.data.status_message) {
+      return this.data.status_message;
+    } else {
+      return this.defaultStatusMessage();
+    }
+  };
+
+  OpenNight.prototype.forTemplate = function() {
+    var obj = {
+      date: new Date(this.data.date).toDateString(),
+      status_message: this.statusMessage()
+    };
+    this.addLabelPropertiesTo(obj);
+    return obj;
+  };
+
+  OpenNight.prototype.daysInMilliseconds = function(numberOfDays) {
+    return numberOfDays * 86400000;
+  };
+
+  OpenNight.prototype.showFromDate = function() {
+    var daysInAdvance = this.data.show_days_in_advance || 6;
+    return new Date(this.date.getTime() - (this.daysInMilliseconds(daysInAdvance)))
+  };
+
+  OpenNight.prototype.isUpcoming = function(now) {
+    return this.date >= now && this.showFromDate(now) <= now;
+  };
+
+  OpenNight.upcoming = function(data) {
+    var now = new Date();
+    // TODO Add polyfills
+    return data.map(function(obj) {
+      return new OpenNight(obj);
+    }).filter(function(obj) {
+      return obj.isUpcoming(now);
+    }).sort(function(a, b) {
+      return b.date - a.date;
+    });
+  };
+
+  $((function($, Mustache, OpenNight) {
+    var template = $('#event_template').html();
+    Mustache.parse(template);
+    $('#events').html('');
+    $.getJSON('/events.json', function(data) {
+      $.each(OpenNight.upcoming(data), function(index, openNight) {
+        //openNight = new OpenNight(obj);
+        var rendered = Mustache.render(template, openNight.forTemplate());
+        $('#events').append(rendered);
+      });
+    });
+  })($, Mustache, OpenNight));
+</script>
