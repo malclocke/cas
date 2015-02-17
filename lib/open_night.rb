@@ -46,7 +46,7 @@ class OpenNight
   end
 
   def to_json(*a)
-    to_h.merge('date' => date).to_json(*a)
+    to_h.merge('date' => date, 'url' => url).to_json(*a)
   end
 
   def to_h

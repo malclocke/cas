@@ -79,6 +79,7 @@ title: CAS - Canterbury Astronomical Society
     </h3>
     <p>
       {{ status_message }}
+      <a class="btn btn-default btn-xs" href="{{ url }}">More info</a>
     </p>
   </div>
 </script>
@@ -128,7 +129,8 @@ title: CAS - Canterbury Astronomical Society
   OpenNight.prototype.forTemplate = function() {
     var obj = {
       date: new Date(this.data.date).toDateString(),
-      status_message: this.statusMessage()
+      status_message: this.statusMessage(),
+      url: this.data.url
     };
     this.addLabelPropertiesTo(obj);
     return obj;
