@@ -12,7 +12,7 @@ if defined?(ActiveSupport::JSON)
   end
 end
 
-require './lib/open_night'
+require './lib/event'
 
 ###
 # Compass

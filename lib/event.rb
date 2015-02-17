@@ -21,10 +21,22 @@ class Event
 
   def self.all(resources)
     resources.select do |resource|
-      resource.destination_path =~ /\Aopen-nights\/\d\d\d\d\/\d\d\d\d/
+      is_event?(resource)
     end.map do |resource|
       new(resource)
     end.sort_by(&:date)
+  end
+
+  def self.is_event?(resource)
+    is_open_night?(resource) || is_general_event?(resource)
+  end
+
+  def self.is_open_night?(resource)
+    resource.destination_path =~ /\Aopen-nights\/\d\d\d\d\/\d\d\d\d/
+  end
+
+  def self.is_general_event?(resource)
+    resource.destination_path =~ /\Aevents\/\d\d\d\d\/.*\.html\Z/
   end
 
   def self.future(resources)
@@ -35,7 +47,7 @@ class Event
     future(resources).select(&:upcoming?)
   end
 
-  attr_reader :resource
+  attr_reader :resource, :event_type
 
   extend Forwardable
   def_delegators :data, :is_open, :group_booking, :moon_phase, :moon_viewable,
@@ -43,10 +55,15 @@ class Event
 
   def initialize(resource)
     @resource = resource
+    @event_type = if Event.is_open_night?(resource)
+                    'open_night'
+                  else
+                    'event'
+                  end
   end
 
   def to_json(*a)
-    to_h.merge('date' => date, 'url' => url).to_json(*a)
+    to_h.merge('date' => date, 'url' => url, 'event_type' => event_type).to_json(*a)
   end
 
   def to_h

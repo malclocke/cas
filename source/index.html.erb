@@ -72,7 +72,8 @@ title: CAS - Canterbury Astronomical Society
 <!-- /END THE FEATURETTES -->
 
 <script type="text/javascript" src="/mustache.js"></script>
-<script id="event_template" type="x-mustache-template">
+
+<script id="open_night_template" type="x-mustache-template">
   <div class="well">
     <h3>Open Night: {{ date }}
       <span class="label label-{{ label_class }}">{{ label_message }}</span>
@@ -83,6 +84,17 @@ title: CAS - Canterbury Astronomical Society
     </p>
   </div>
 </script>
+
+<script id="event_template" type="x-mustache-template">
+  <div class="well">
+    <h3>{{ date }} - {{ data.title }}</h3>
+    <p>
+      {{ data.description }}
+      <a class="btn btn-default btn-xs" href="{{ url }}">More info</a>
+    </p>
+  </div>
+</script>
+
 <script type="text/javascript">
   function Event(data) {
     this.data = data;
@@ -130,6 +142,7 @@ title: CAS - Canterbury Astronomical Society
     var obj = {
       date: new Date(this.data.date).toDateString(),
       status_message: this.statusMessage(),
+      data: this.data,
       url: this.data.url
     };
     this.addLabelPropertiesTo(obj);
@@ -162,13 +175,16 @@ title: CAS - Canterbury Astronomical Society
   };
 
   $((function($, Mustache, Event) {
-    var template = $('#event_template').html();
-    Mustache.parse(template);
+    var templates = {
+      'open_night': $('#open_night_template').html(),
+      'event': $('#event_template').html()
+    };
+    Mustache.parse(templates.open_night);
     $('#events').html('');
     $.getJSON('/events.json', function(data) {
-      $.each(Event.upcoming(data), function(index, openNight) {
-        //openNight = new Event(obj);
-        var rendered = Mustache.render(template, openNight.forTemplate());
+      $.each(Event.upcoming(data), function(index, e) {
+        var template = templates[e.data.event_type];
+        var rendered = Mustache.render(template, e.forTemplate());
         $('#events').append(rendered);
       });
     });
