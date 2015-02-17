@@ -149,23 +149,36 @@
 <!-- /END THE FEATURETTES -->
 
 <script type="text/javascript" src="/mustache.js"></script>
-<script id="event_template" type="x-mustache-template">
+
+<script id="open_night_template" type="x-mustache-template">
   <div class="well">
     <h3>Open Night: {{ date }}
       <span class="label label-{{ label_class }}">{{ label_message }}</span>
     </h3>
     <p>
       {{ status_message }}
+      <a class="btn btn-default btn-xs" href="{{ url }}">More info</a>
     </p>
   </div>
 </script>
+
+<script id="event_template" type="x-mustache-template">
+  <div class="well">
+    <h3>{{ date }} - {{ data.title }}</h3>
+    <p>
+      {{ data.description }}
+      <a class="btn btn-default btn-xs" href="{{ url }}">More info</a>
+    </p>
+  </div>
+</script>
+
 <script type="text/javascript">
-  function OpenNight(data) {
+  function Event(data) {
     this.data = data;
     this.date = new Date(data.date);
   };
 
-  OpenNight.prototype.addLabelPropertiesTo = function(obj) {
+  Event.prototype.addLabelPropertiesTo = function(obj) {
     switch(this.data.go_ahead) {
       case true:
         obj['label_class'] = 'success';
@@ -184,7 +197,7 @@
     return obj;
   };
 
-  OpenNight.prototype.defaultStatusMessage = function() {
+  Event.prototype.defaultStatusMessage = function() {
     if (this.data.go_ahead === true) {
       return 'The observatory is open tonight.';
     } else if(this.data.go_ahead === false) {
@@ -194,7 +207,7 @@
     }
   };
 
-  OpenNight.prototype.statusMessage = function() {
+  Event.prototype.statusMessage = function() {
     if (this.data.status_message) {
       return this.data.status_message;
     } else {
@@ -202,33 +215,35 @@
     }
   };
 
-  OpenNight.prototype.forTemplate = function() {
+  Event.prototype.forTemplate = function() {
     var obj = {
       date: new Date(this.data.date).toDateString(),
-      status_message: this.statusMessage()
+      status_message: this.statusMessage(),
+      data: this.data,
+      url: this.data.url
     };
     this.addLabelPropertiesTo(obj);
     return obj;
   };
 
-  OpenNight.prototype.daysInMilliseconds = function(numberOfDays) {
+  Event.prototype.daysInMilliseconds = function(numberOfDays) {
     return numberOfDays * 86400000;
   };
 
-  OpenNight.prototype.showFromDate = function() {
+  Event.prototype.showFromDate = function() {
     var daysInAdvance = this.data.show_days_in_advance || 6;
     return new Date(this.date.getTime() - (this.daysInMilliseconds(daysInAdvance)))
   };
 
-  OpenNight.prototype.isUpcoming = function(now) {
+  Event.prototype.isUpcoming = function(now) {
     return this.date >= now && this.showFromDate(now) <= now;
   };
 
-  OpenNight.upcoming = function(data) {
+  Event.upcoming = function(data) {
     var now = new Date();
     // TODO Add polyfills
     return data.map(function(obj) {
-      return new OpenNight(obj);
+      return new Event(obj);
     }).filter(function(obj) {
       return obj.isUpcoming(now);
     }).sort(function(a, b) {
@@ -236,18 +251,21 @@
     });
   };
 
-  $((function($, Mustache, OpenNight) {
-    var template = $('#event_template').html();
-    Mustache.parse(template);
+  $((function($, Mustache, Event) {
+    var templates = {
+      'open_night': $('#open_night_template').html(),
+      'event': $('#event_template').html()
+    };
+    Mustache.parse(templates.open_night);
     $('#events').html('');
     $.getJSON('/events.json', function(data) {
-      $.each(OpenNight.upcoming(data), function(index, openNight) {
-        //openNight = new OpenNight(obj);
-        var rendered = Mustache.render(template, openNight.forTemplate());
+      $.each(Event.upcoming(data), function(index, e) {
+        var template = templates[e.data.event_type];
+        var rendered = Mustache.render(template, e.forTemplate());
         $('#events').append(rendered);
       });
     });
-  })($, Mustache, OpenNight));
+  })($, Mustache, Event));
 </script>
 
 
