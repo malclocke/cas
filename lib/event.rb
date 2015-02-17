@@ -20,22 +20,30 @@ class Event
   UPCOMING_DAYS = 14
 
   def self.all(resources)
+    (open_nights(resources) + events(resources)).sort_by(&:date)
+  end
+
+  def self.open_nights(resources)
+    resources.select do |resource|
+      is_open_night?(resource)
+    end.map do |resource|
+      new(resource)
+    end
+  end
+
+  def self.events(resources)
     resources.select do |resource|
       is_event?(resource)
     end.map do |resource|
       new(resource)
-    end.sort_by(&:date)
-  end
-
-  def self.is_event?(resource)
-    is_open_night?(resource) || is_general_event?(resource)
+    end
   end
 
   def self.is_open_night?(resource)
     resource.destination_path =~ /\Aopen-nights\/\d\d\d\d\/\d\d\d\d/
   end
 
-  def self.is_general_event?(resource)
+  def self.is_event?(resource)
     resource.destination_path =~ /\Aevents\/\d\d\d\d\/.*\.html\Z/
   end
 
