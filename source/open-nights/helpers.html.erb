@@ -21,7 +21,7 @@ society's telescopes as there are always experienced members on hand to help.
     </tr>
   </thead>
   <tbody>
-    <% OpenNight.all(sitemap.resources).each do |open_night| %>
+    <% Event.all(sitemap.resources).each do |open_night| %>
       <tr>
         <td><%= open_night.date %></td>
         <td><%= open_night.group_booking %></td>

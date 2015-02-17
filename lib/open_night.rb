@@ -15,7 +15,7 @@ require 'forwardable'
 #   - Malcolm Locke
 # ---
 #
-class OpenNight
+class Event
 
   UPCOMING_DAYS = 14
 
