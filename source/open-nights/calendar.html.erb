@@ -1,3 +1,42 @@
+<h1>Open Nights</h1>
+<p>
+The Canterbury Astronomical Society (CAS) hosts open nights, during the winter
+months (April to September) when daylight savings has finished.
+</p>
+<p>
+Members of the public are invited to join us and have a look through
+professional quality telescopes, each manned by a member of the society, who
+will operate the telescope and explain what you are seeing through it.
+</p>
+<p>
+You are encouraged to ask as many questions as you like, and we will do our
+best to answer them all.
+</p>
+<p>
+Organised groups of 10 to 35 people are required to book their visit to the
+Observatory. Booking will allow the society to prepare for a larger group and
+arrange for more astronomers to be present. We regret that bookings for group
+sizes larger than 35 cannot be accepted due to observatory site restrictions.
+Groups larger than 35 may wish to consider booking multiple sessions of up to
+35 people.The 2014 open night season has now ended. Open night dates for 2015
+will be announced during February 2015 and will run from the first Friday after
+the end of daylight savings. Online bookings for 2015 open nights will be
+available from this page from February 2015.
+</p>
+<p>
+Individuals and small groups of fewer than 10 people are welcome to visit on
+any Public Night. Booking is not required for groups of fewer than 10 people.
+</p>
+<p>
+Open nights run from 7:30pm to 9:00pm and are held on Friday nights, weather
+permitting.
+</p>
+<p>
+For general open night queries, please email
+<a href="mailto:bookings@cas.org.nz">bookings@cas.org.nz</a>.
+</p>
+
+<h2>Open Night Calendar</h2>
 <table class="table">
   <thead>
     <tr>
@@ -12,9 +51,82 @@
       <tr>
         <td><%= link_to open_night.date, open_night.url %></td>
         <td><%= open_night.is_open ? 'Open for individuals and small groups' : 'Closed' %></td>
-        <td><%= open_night.group_booking %></td>
+        <td>
+          <% if open_night.group_booking %>
+            <%= open_night.group_booking %>
+          <% else %>
+            <a href="mailto:bookings@cas.org.nz?subject=Open+night+booking+enquiry+for+<%= open_night.date %>">Email to book</a>
+          <% end %>
+        </td>
         <td><%= open_night.moon_viewable ? 'Yes' : 'No' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<h2>Pricing</h2>
+<p>
+<strong>$10.00 per adult</strong> or <strong>$7.00 per child</strong> (ages 5 to 15) (cash only).
+</p>
+<p>
+If your group is from a large organisation, you might prefer to consider your
+organisation becoming a Corporate member of the society for between $210 and
+$240. Family groups might prefer to consider becoming a Family member of the
+society for between $105 and $120. Please refer to the Membership Form page and
+CAS Constitution for full details. Corporate and Family society members are
+welcome to book an open night for an organised guided tour for their corporate
+group or family. Holding a Corporate or Family membership entitles your group
+or family to attend any open night at no extra charge, some members of your
+organisation or family may even like to become involved in the society.
+
+
+<h2>Phases of the moon and choosing when to visit.</h2>
+
+<p>
+If you are particularly interested in observing the fainter objects in the
+night sky, we recommend you try to organise your visit to coincide as close as
+possible with a new moon. The best lunar phases for deep sky observing are
+between last quarter and first quarter (spanning the new moon phase). If you
+are interested in viewing the moon (lunar observing) then we recommend you try
+to organise your visit to be at least two days or more before or after the new
+moon, and for a night when the moon will be above the horizon.
+</p>
+
+<h2>On the night of your visit</h2>
+
+<p>
+The home page of the CAS website will be updated no later than 6:30pm, advising whether the observatory is open or closed. The observatory may be closed during wet weather, so check the home page before visiting to avoid disappointment. On cloudy evenings, a cloudy-night presentation and discussion will be held.
+Please dip your headlights before arriving. Onsite parking is reserved for society members, please angle-park on the roadside, outside the observatory. Please wait outside the gate until 7:30pm as it will be dark and astronomers will be moving about setting up equipment. Walk down the driveway towards the lodge, following the red lights. 
+
+Suggestions to improve your viewing experience
+
+<ul>
+  <li><strong>Dress Warm</strong>
+  We recommend that you dress warm, as the telescopes (and you) are exposed to
+  the winter night air.</li>
+  
+  <li><strong>No torches</strong>
+  Becoming dark-adapted is essential for seeing the faint fuzzies that make up
+  the deep sky.  It takes 10-15 minutes for the pupil in your eye to expand to
+  its maximum aperture.  Over another 15 to 20 minutes, a chemical reaction in
+  the eye kicks in that further boosts its sensitivity.  A single shot of white
+  light can ruin your night vision for up to 30 minutes.</li>
+  
+  <li><strong>Skymap</strong>
+  Free maps of the night sky available at SkyMaps.com each month - great for
+  the kids.  Make sure you get the southern hemisphere map!
+  </li>
+</ul>
+
+<h2>Kidsfest</h2>
+
+<p>
+Kidsfest is an annual event organised by TV2. For 2014, the CAS observatory
+will be open every night of Kidsfest from 7:30pm to 9:00pm, weather permitting.
+Check the home page of the CAS website at 6:30pm each night of Kidsfest for
+confirmation. A donation of $5.00 per head for ages 5 and above applies (cash
+only). Visit http://www.kidsfest.co.nz for more information about Kidsfest. 
+</p>
+
+<h2>Observatory Location</h2>
+<iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=218+Bells+Road,+West+Melton,+New+Zealand&amp;aq=0&amp;oq=218+&amp;sll=-43.497764,172.35166&amp;sspn=0.004654,0.010568&amp;t=m&amp;g=-43.498355,172.349212&amp;ie=UTF8&amp;hq=&amp;hnear=218+Bells+Rd,+West+Melton+7671,+New+Zealand&amp;ll=-43.498708,172.349655&amp;spn=0.074459,0.169086&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=218+Bells+Road,+West+Melton,+New+Zealand&amp;aq=0&amp;oq=218+&amp;sll=-43.497764,172.35166&amp;sspn=0.004654,0.010568&amp;t=m&amp;g=-43.498355,172.349212&amp;ie=UTF8&amp;hq=&amp;hnear=218+Bells+Rd,+West+Melton+7671,+New+Zealand&amp;ll=-43.498708,172.349655&amp;spn=0.074459,0.169086&amp;z=13" style="color:#0000FF;text-align:left">View Larger Map</a></small>
