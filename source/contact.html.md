@@ -82,7 +82,7 @@ Committee
     <tr>
       <td></td>
       <td>Jim Walford</td>
-      <td>jwalford007@gmail.com</td>
+      <td></td>
     </tr>
     <tr>
       <td></td>
