@@ -126,7 +126,7 @@ Specialist Sections
       <td>Photometry &amp; Variable Stars</td>
       <td>Clive Rowe</td>
       <td>c.rowe1@orcon.net.nz</td>
-      <td>(03) 318 3166</td>
+      <td></td>
     </tr>
     <tr>
       <td>Telescope Optics</td>
