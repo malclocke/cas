@@ -26,7 +26,7 @@ Committee
     </tr>
     <tr>
       <td>Vice President</td>
-      <td>Adrian Kelly</td>
+      <td>Gary Steel</td>
       <td>vice.president@cas.org.nz</td>
     </tr>
     <tr>
@@ -36,12 +36,12 @@ Committee
     </tr>
     <tr>
       <td>Secretary</td>
-      <td>Jin Chang</td>
-      <td>echochangjin@hotmail.com</td>
+      <td>Andrei Cotiga</td>
+      <td>secretary@cas.org.nz</td>
     </tr>
     <tr>
       <td>Observatory Director</td>
-      <td>Gary Steel</td>
+      <td>Andrei Cotiga</td>
       <td>observatory.director@cas.org.nz</td>
     </tr>
     <tr>
@@ -51,7 +51,7 @@ Committee
     </tr>
     <tr>
       <td>Membership Secretary</td>
-      <td>Ryan Ridden-Harper</td>
+      <td>Malcolm Locke</td>
       <td>membership@cas.org.nz</td>
     </tr>
     <tr>
@@ -66,11 +66,6 @@ Committee
     </tr>
     <tr>
       <td>Committee Members</td>
-      <td>Andrei Cotiga</td>
-      <td>acotiga@yahoo.com</td>
-    </tr>
-    <tr>
-      <td></td>
       <td>Robert Glassey</td>
       <td>rob@robglassey.com</td>
     </tr>
@@ -78,6 +73,21 @@ Committee
       <td></td>
       <td>Dennis Goodman</td>
       <td>astrovino@astrovino.co.nz</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Paul Raudsepp</td>
+      <td>Paul.Raudsepp@gmail.com</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Jim Walford</td>
+      <td>jwalford007@gmail.com</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Malcolm Carr</td>
+      <td>malcolmcarr@clear.net.nz</td>
     </tr>
     <tr>
       <td>Public Nights and Group Bookings</td>
