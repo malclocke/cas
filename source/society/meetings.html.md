@@ -31,7 +31,17 @@ meetings.
     <tr>
       <td><time datetime="2015-04-21">Tue Apr 21</time></td>
       <td>TBC</td>
-      <td>TBC</td>
+      <td>
+        <strong>Spiders In Space - Toby Hendy</strong>
+        As a summer intern at the Australian Astronomical Observatory I worked
+        on low surface brightness imaging with the Huntsman Array. The Huntsman
+        Array is an innovative project using commercial Canon sports lenses for
+        astronomical imaging. The low amount of scattered light in the Canon
+        lenses gives opportunities for imaging very faint galactic structures
+        that cannot be seen with large reflecting telescopes. I will talk about
+        my contributions to this project and the spin-off cubesat space
+        telescope, Huntsman in Space.
+      </td>
     </tr>
     <tr>
       <td><time datetime="2015-05-19">Tue May 19</time></td>
