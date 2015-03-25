@@ -75,9 +75,10 @@ title: CAS - Canterbury Astronomical Society
 
 <script id="open_night_template" type="x-mustache-template">
   <div class="well">
-    <h3>Open Night: {{ date }}
+    <h3>Open Night: {{ data.title }} {{ date }}
       <span class="label label-{{ label_class }}">{{ label_message }}</span>
     </h3>
+    <p><strong>{{ data.times }}</strong></p>
     <p>
       {{ status_message }}
       <a class="btn btn-default btn-xs" href="{{ url }}">More info</a>
@@ -126,7 +127,7 @@ title: CAS - Canterbury Astronomical Society
     } else if(this.data.go_ahead === false) {
       return 'The observatory is closed tonight.';
     } else {
-      return 'An update will be posted here by 6.30pm';
+      return 'An update will be posted here no later than 45 minutes before the start of the open night.';
     }
   };
 
