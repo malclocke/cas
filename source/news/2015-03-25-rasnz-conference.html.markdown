@@ -15,7 +15,7 @@ For full details and registration, see the
 [RASNZ website](http://www.rasnz.org.nz/groups-news-events/rasnz-conference)
 
 This year is the 50th anniversary of [Mount John University Observatory](http://www.phys.canterbury.ac.nz/research/mt_john/),
-and to celebrate this the RASNZ conference will be immeadiately preceded by
+and to celebrate this the RASNZ conference will be immediately preceded by
 the [Mount John Observatory 50th Anniversary Symposium](http://www.phys.canterbury.ac.nz/mtjohn50/)
 
 *image credit [Adam Foster](https://www.flickr.com/photos/paperpariah/4742731423/)*
