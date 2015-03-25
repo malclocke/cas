@@ -26,6 +26,21 @@ title: CAS - Canterbury Astronomical Society
 <hr class="featurette-divider">
 
 <div class="row featurette">
+  <h2>News</h2>
+  <% blog.articles[0..2].each do |article| %>
+  <div class="col-md-4">
+    <h3 class="featurette-heading">
+      <a href="<%= article.url %>"><%= article.title %></a>
+    </h3>
+    <p class="lead">
+      <%= article.summary(250) %>
+    </p>
+  </div>
+  <% end %>
+</div>
+
+<hr class="featurette-divider">
+<div class="row featurette">
   <div class="col-md-5">
     <%= image_tag 'society.jpg', :class => 'img-responsive img-rounded' %>
   </div>

@@ -63,6 +63,7 @@
                 <li><%= link_to 'Open Night Helpers', '/open-nights/helpers.html' %></li>
               </ul>
             </li>
+            <li><%= link_to('News', '/news/') %></li>
             <li class="dropdown">
               <%=
                 link_to(
@@ -109,6 +110,10 @@
 
       <% if current_page.data.main_image %>
         <%= image_tag(current_page.data.main_image, :class => 'pull-right img-thumbnail img-responsive') %>
+      <% end %>
+
+      <% if current_page.data.title %>
+        <h1><%= current_page.data.title %></h1>
       <% end %>
 
       <%= yield %>
