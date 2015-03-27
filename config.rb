@@ -13,6 +13,7 @@ if defined?(ActiveSupport::JSON)
 end
 
 require './lib/event'
+require './lib/practical_astronomy'
 
 ###
 # Compass

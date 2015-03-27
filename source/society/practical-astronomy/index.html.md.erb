@@ -1,0 +1,24 @@
+Practical Astronomy
+===================
+Practical Astronomy is a friendly, informal meeting open to all interested
+people. We meet on the 3rd Tuesday of the month (except December & January), in
+room F3 of the University of Canterbury School of Forestry.
+
+The Practical Astronomy meeting starts at 7:00pm and is followed at 8:00pm by
+the society's monthly meeting. Attendees are welcome to stay for both meetings. 
+
+Notes and slides from previous sessions are archived below.  To see a list of
+the topics for the upcoming Practical Astronomy sessions see the [monthly
+meetings page](/society/meetings.html).
+
+<% PracticalAstronomy.all(sitemap.resources).group_by(&:year).sort.reverse.each do |year, pas| %>
+
+<%= year %>
+
+-----------
+
+<% pas.sort_by(&:date).each do |pa| %>
+- <%= link_to "#{pa.date} - #{pa.title}", pa.url %>
+<% end %>
+
+<% end %>
