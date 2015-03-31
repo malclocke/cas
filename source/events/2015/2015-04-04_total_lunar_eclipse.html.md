@@ -23,3 +23,5 @@ permitting.  See you there!
 - Greatest eclipse: **01:00 NZDT**
 - Total eclipse ends: **01:03 NZDT**
 - Partial umbral eclipse ends: **02:45 NZDT**
+
+_Photo credit [Malcolm Locke](https://www.flickr.com/photos/malclocke/15298295769/)_
