@@ -28,7 +28,7 @@ class Event
       is_open_night?(resource)
     end.map do |resource|
       new(resource)
-    end
+    end.sort_by(&:date)
   end
 
   def self.events(resources)
@@ -47,8 +47,8 @@ class Event
     resource.destination_path =~ /\Aevents\/\d\d\d\d\/.*\.html\Z/
   end
 
-  def self.future(resources)
-    all(resources).select(&:future?)
+  def self.future(resources, limit_to = :all)
+    send(limit_to, resources).select(&:future?)
   end
 
   def self.upcoming(resources)

@@ -50,7 +50,7 @@ For general open night queries, please email
     </tr>
   </thead>
   <tbody>
-    <% Event.future(sitemap.resources).each do |open_night| %>
+    <% Event.future(sitemap.resources, :open_nights).each do |open_night| %>
       <tr>
         <td><%= link_to open_night.date, open_night.url %></td>
         <td><%= open_night.is_open ? 'Open for individuals and small groups' : 'Closed' %></td>
