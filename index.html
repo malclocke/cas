@@ -283,7 +283,7 @@ Zealand.</p>
     }).filter(function(obj) {
       return obj.isUpcoming(now);
     }).sort(function(a, b) {
-      return b.date - a.date;
+      return a.date - b.date;
     });
   };
 
