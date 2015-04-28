@@ -7,7 +7,7 @@ please fill out the form below.
 [CAS Membership Application Form](/pdf/MembershipApplication.pdf) (pdf)
 
 
-2013 Membership Subscription Rates
+2015 Membership Subscription Rates
 ----------------------------------
 
 <table class="table">
