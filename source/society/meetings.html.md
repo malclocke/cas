@@ -50,7 +50,7 @@ meetings.
     <tr>
       <td><time datetime="2015-05-19">Tue May 19</time></td>
       <td><strong>The Southern Milky Way</strong> - Our's to enjoy.</td>
-      <td>TBC</td>
+      <td><strong>How astronomy advanced inquiry to the use of an experimental method</strong> - Philip Catton</td>
     </tr>
     <tr>
       <td><time datetime="2015-06-16">Tue Jun 16</time></td>
