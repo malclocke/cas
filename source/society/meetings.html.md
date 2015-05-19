@@ -24,7 +24,7 @@ meetings.
     </tr>
     <tr>
       <td><time datetime="2015-03-17">Tue Mar 17</time></td>
-      <td><strong>The Messier Marathon</strong> - An introduction to the Messier catalogue, the CAS
+      <td><strong><a href="/society/practical-astronomy/2015-03-17-the-messier-marathon.html">The Messier Marathon</a></strong> - An introduction to the Messier catalogue, the CAS
       catalogue, and observing madness!</td>
       <td><strong>AGM</strong> + <strong>The future of the R.F. Joyce Observatory</strong> - Gary Steel.</td>
     </tr>
