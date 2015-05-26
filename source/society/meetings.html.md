@@ -55,7 +55,9 @@ meetings.
     <tr>
       <td><time datetime="2015-06-16">Tue Jun 16</time></td>
       <td><strong>Backyard Astronomy</strong> - Tips for urban observing.</td>
-      <td>TBC</td>
+      <td><strong>Key developments and discoveries in
+      stellar spectroscopy during the last three decades of the 20th
+      century</strong> - John Hearnshaw</td>
     </tr>
     <tr>
       <td><time datetime="2015-07-21">Tue Jul 21</time></td>
