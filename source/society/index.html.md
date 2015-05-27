@@ -44,4 +44,4 @@ The observatory site includes, in addition to the domes, a meeting room with
 kitchen facilities and an adjacent toilet block.
 
 A copy of the current version of the Canterbury Astronomical Society
-Constitution is available for download here or via the Membership page. 
+Constitution is [available for download](/pdf/CAS_constitution.pdf).
