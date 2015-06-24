@@ -110,7 +110,16 @@
     <div class="container">
 
       <% if current_page.data.main_image %>
-        <%= image_tag(current_page.data.main_image, :class => 'pull-right img-thumbnail img-responsive') %>
+        <% if current_page.data.main_image_caption %>
+          <div class="thumbnail pull-right img-responsive">
+            <%= image_tag(current_page.data.main_image) %>
+            <div class="caption">
+              <%= current_page.data.main_image_caption %>
+            </div>
+          </div>
+        <% else %>
+          <%= image_tag(current_page.data.main_image, :class => 'pull-right img-thumbnail img-responsive') %>
+        <% end %>
       <% end %>
 
       <% if current_page.data.title %>
