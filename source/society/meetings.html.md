@@ -55,14 +55,26 @@ joining the Society is welcome to attend either or both meetings.
     <tr>
       <td><time datetime="2015-06-16">Tue Jun 16</time></td>
       <td><strong>Backyard Astronomy</strong> - Tips for urban observing.</td>
-      <td><strong>Key developments and discoveries in
-      stellar spectroscopy during the last three decades of the 20th
-      century</strong> - John Hearnshaw</td>
+      <td><strong>Observatory long term plan</strong> - Gary Steel</td>
     </tr>
     <tr>
       <td><time datetime="2015-07-21">Tue Jul 21</time></td>
       <td><strong>Dark Nebulae</strong> - Snakes,  Kiwis and other Doodads.</td>
-      <td>TBC</td>
+      <td>
+        <strong>What do you get when you mix a telescope and a 747?</strong>
+        - Karina Leppik
+        <p>
+        NASA&apos;s SOFIA (Stratospheric Observatory For Infrared Astronomy) is
+        based in Christchurch for six weeks this winter to observe Southern
+        Hemisphere objects.  As the only currently operating airborne
+        observatory, and the only mission or facility currently in operation
+        capable of providing mid- and far-infrared data, SOFIA&apos;s unique
+        capabilities allow for unique observations.  Karina Leppik, a Mission
+        Director for SOFIA, will talk about the telescope, airplane, challenges
+        of airborne astronomy, and some of SOFIA's science in this general
+        audience talk.
+        </p>
+      </td>
     </tr>
     <tr>
       <td><time datetime="2015-08-18">Tue Aug l8</time></td>
@@ -72,7 +84,9 @@ joining the Society is welcome to attend either or both meetings.
     <tr>
       <td><time datetime="2015-09-15">Tue Sep 15</time></td>
       <td><strong>The Moon</strong> - a close up view of another world.</td>
-      <td>TBC</td>
+      <td><strong>Key developments and discoveries in
+      stellar spectroscopy during the last three decades of the 20th
+      century</strong> - John Hearnshaw</td>
     </tr>
     <tr>
       <td><time datetime="2015-10-20">Tue Oct 20</time></td>
