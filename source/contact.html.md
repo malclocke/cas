@@ -21,12 +21,12 @@ Committee
   <tbody>
     <tr>
       <td>President</td>
-      <td>Euan Mason</td>
+      <td>Gary Steel</td>
       <td>president@cas.org.nz</td>
     </tr>
     <tr>
       <td>Vice President</td>
-      <td>Gary Steel</td>
+      <td>Robert Glassey</td>
       <td>vice.president@cas.org.nz</td>
     </tr>
     <tr>
@@ -66,11 +66,6 @@ Committee
     </tr>
     <tr>
       <td>Committee Members</td>
-      <td>Robert Glassey</td>
-      <td>rob@robglassey.com</td>
-    </tr>
-    <tr>
-      <td></td>
       <td>Dennis Goodman</td>
       <td>astrovino@astrovino.co.nz</td>
     </tr>
