@@ -79,7 +79,22 @@ Society is welcome to attend either or both meetings.
     <tr>
       <td><time datetime="2015-08-18">Tue Aug l8</time></td>
       <td><strong>The Northern Winter Sky</strong> - be in quick!</td>
-      <td>TBC</td>
+      <td>
+        <strong>Meteoroids, Meteors, and the CAMS Project</strong> - Ian Crumpton
+        <p>Cameras for All-Sky Meteor Surveillance.</p>
+        <p>
+          The CAMS project, now operating in Canterbury, seeks to observe and
+          describe the meteoroid streams that Earth regularly passes through.
+        </p>
+        <p>
+          Ian Crumpton has been involved in astronomy for over 40 years, having
+          been a society member in Gisborne, Blenheim, Dunedin, and, since
+          1991, Canterbury. He has spoken to many U3A and other groups on
+          subjects as wide ranging as astronomy, the roots of science, the
+          evolution of religion, and of western music. He was president of CAS
+          for six years prior to Euan.
+        </p>
+      </td>
     </tr>
     <tr>
       <td><time datetime="2015-09-15">Tue Sep 15</time></td>
