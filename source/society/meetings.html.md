@@ -106,7 +106,7 @@ Society is welcome to attend either or both meetings.
     <tr>
       <td><time datetime="2015-10-20">Tue Oct 20</time></td>
       <td><strong>The Galaxies of Spring</strong> - and other cool stuff too.</td>
-      <td><strong>The Music of the Stars</strong> - Karen Pollard</td>
+      <td><strong>Asteroseismology: The Music of the Stars</strong> - Assoc. Prof. Karen Pollard</td>
     </tr>
     <tr>
       <td><time datetime="2015-11-17">Tue Nov 17</time></td>
