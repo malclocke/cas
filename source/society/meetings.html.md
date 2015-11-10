@@ -111,7 +111,7 @@ Society is welcome to attend either or both meetings.
     <tr>
       <td><time datetime="2015-11-17">Tue Nov 17</time></td>
       <td><strong>Double stars.</strong></td>
-      <td><strong>Quiz and soap box night</strong> November&amp;s meeting will
+      <td><strong>Quiz and soap box night</strong> November&apos;s meeting will
       be a short team quiz, and a "New toys soap box".  The soap box is an
       opportunity for you to talk about your latest gear, or the cool stuff you
       want for Christmas. It could be a show and tell if you want, or maybe
